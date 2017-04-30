@@ -213,5 +213,5 @@
   infoWindow.$inject =
     ['Attr2MapOptions', '$compile', '$q', '$templateRequest', '$timeout', '$parse', 'NgMap'];
 
-  angular.module('ngMap').directive('infoWindow', infoWindow);
+  angular.module('PageBuilderApplication').directive('infoWindow', infoWindow);
 })();

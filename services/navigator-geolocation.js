@@ -62,6 +62,6 @@
   };
   NavigatorGeolocation.$inject = ['$q'];
 
-  angular.module('ngMap').
+  angular.module('PageBuilderApplication').
     service('NavigatorGeolocation', NavigatorGeolocation);
 })();

@@ -31,5 +31,5 @@
     };
   };
 
-  angular.module('ngMap').filter('jsonize', jsonizeFilter);
+  angular.module('PageBuilderApplication').filter('jsonize', jsonizeFilter);
 })();

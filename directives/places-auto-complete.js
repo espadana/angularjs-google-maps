@@ -83,5 +83,5 @@
   };
 
   placesAutoComplete.$inject = ['Attr2MapOptions', '$timeout'];
-  angular.module('ngMap').directive('placesAutoComplete', placesAutoComplete);
+  angular.module('PageBuilderApplication').directive('placesAutoComplete', placesAutoComplete);
 })();

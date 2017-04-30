@@ -17,7 +17,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('overlayMapType', [
+  angular.module('PageBuilderApplication').directive('overlayMapType', [
     'NgMap', function(NgMap) {
 
     return {

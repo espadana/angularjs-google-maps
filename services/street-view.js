@@ -66,5 +66,5 @@
   };
   StreetView.$inject = ['$q'];
 
-  angular.module('ngMap').service('StreetView', StreetView);
+  angular.module('PageBuilderApplication').service('StreetView', StreetView);
 })();

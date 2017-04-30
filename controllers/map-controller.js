@@ -289,5 +289,5 @@
   __MapController.$inject = [
     '$scope', '$element', '$attrs', '$parse', '$interpolate', 'Attr2MapOptions', 'NgMap', 'NgMapPool', 'escapeRegexpFilter'
   ];
-  angular.module('ngMap').controller('__MapController', __MapController);
+  angular.module('PageBuilderApplication').controller('__MapController', __MapController);
 })();

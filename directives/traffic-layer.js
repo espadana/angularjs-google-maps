@@ -16,7 +16,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('trafficLayer', [
+  angular.module('PageBuilderApplication').directive('trafficLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

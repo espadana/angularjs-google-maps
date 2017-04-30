@@ -41,5 +41,5 @@
   };
   GeoCoder.$inject = ['$q'];
 
-  angular.module('ngMap').service('GeoCoder', GeoCoder);
+  angular.module('PageBuilderApplication').service('GeoCoder', GeoCoder);
 })();

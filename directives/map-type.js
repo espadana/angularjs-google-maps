@@ -17,7 +17,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('mapType', ['$parse', 'NgMap',
+  angular.module('PageBuilderApplication').directive('mapType', ['$parse', 'NgMap',
     function($parse, NgMap) {
 
     return {

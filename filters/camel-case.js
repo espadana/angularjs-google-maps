@@ -21,5 +21,5 @@
     };
   };
 
-  angular.module('ngMap').filter('camelCase', camelCaseFilter);
+  angular.module('PageBuilderApplication').filter('camelCase', camelCaseFilter);
 })();

@@ -11,7 +11,7 @@
       * { box-sizing: border-box; }
     </style>
     <script>
-      angular.module('ngMap').run(function($rootScope, NgMap) {
+      angular.module('PageBuilderApplication').run(function($rootScope, NgMap) {
         NgMap.getMap().then(function(map) {
           $rootScope.map = map;
         });

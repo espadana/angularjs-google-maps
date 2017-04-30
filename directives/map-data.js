@@ -19,7 +19,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('mapData', [
+  angular.module('PageBuilderApplication').directive('mapData', [
     'Attr2MapOptions', 'NgMap', function(Attr2MapOptions, NgMap) {
     var parser = Attr2MapOptions;
     return {

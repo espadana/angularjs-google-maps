@@ -62,6 +62,6 @@
     };
   };
 
-  angular.module('ngMap').directive('map', [mapDirective]);
-  angular.module('ngMap').directive('ngMap', [mapDirective]);
+  angular.module('PageBuilderApplication').directive('map', [mapDirective]);
+  angular.module('PageBuilderApplication').directive('ngMap', [mapDirective]);
 })();

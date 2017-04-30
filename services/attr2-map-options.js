@@ -396,5 +396,5 @@
     'camelCaseFilter', 'jsonizeFilter', 'escapeRegexpFilter'
   ];
 
-  angular.module('ngMap').service('Attr2MapOptions', Attr2MapOptions);
+  angular.module('PageBuilderApplication').service('Attr2MapOptions', Attr2MapOptions);
 })();

@@ -16,7 +16,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('transitLayer', [
+  angular.module('PageBuilderApplication').directive('transitLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

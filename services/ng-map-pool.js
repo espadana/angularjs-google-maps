@@ -125,6 +125,6 @@
 
   NgMapPool.$inject = [ '$document', '$window', '$timeout'];
 
-  angular.module('ngMap').factory('NgMapPool', NgMapPool);
+  angular.module('PageBuilderApplication').factory('NgMapPool', NgMapPool);
 
 })();

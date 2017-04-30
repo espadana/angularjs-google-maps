@@ -31,7 +31,7 @@ factory(root.angular);
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-angular.module('ngMap', []);
+angular.module('PageBuilderApplication', []);
 
 /**
  * @ngdoc controller
@@ -324,7 +324,7 @@ angular.module('ngMap', []);
   __MapController.$inject = [
     '$scope', '$element', '$attrs', '$parse', '$interpolate', 'Attr2MapOptions', 'NgMap', 'NgMapPool', 'escapeRegexpFilter'
   ];
-  angular.module('ngMap').controller('__MapController', __MapController);
+  angular.module('PageBuilderApplication').controller('__MapController', __MapController);
 })();
 
 /**
@@ -381,7 +381,7 @@ angular.module('ngMap', []);
   };
   bicyclingLayer.$inject = ['Attr2MapOptions'];
 
-  angular.module('ngMap').directive('bicyclingLayer', bicyclingLayer);
+  angular.module('PageBuilderApplication').directive('bicyclingLayer', bicyclingLayer);
 })();
 
 /**
@@ -425,8 +425,9 @@ angular.module('ngMap', []);
      * build a custom control element
      */
     var customControlEl = element[0].parentElement.removeChild(element[0]);
-    var content = $transclude();
-    angular.element(customControlEl).append(content);
+    $transclude(scope, function(clone) {
+      angular.element(customControlEl).append(clone);
+    });
 
     /**
      * set events
@@ -456,7 +457,7 @@ angular.module('ngMap', []);
   };
   customControl.$inject = ['Attr2MapOptions', 'NgMap'];
 
-  angular.module('ngMap').directive('customControl', customControl);
+  angular.module('PageBuilderApplication').directive('customControl', customControl);
 })();
 
 /**
@@ -689,7 +690,7 @@ angular.module('ngMap', []);
   customMarkerDirective.$inject =
     ['$timeout', '$compile', '$interpolate', 'Attr2MapOptions', 'NgMap', 'escapeRegexpFilter'];
 
-  angular.module('ngMap').directive('customMarker', customMarkerDirective);
+  angular.module('PageBuilderApplication').directive('customMarker', customMarkerDirective);
 })();
 
 /**
@@ -841,7 +842,7 @@ angular.module('ngMap', []);
   directions.$inject =
     ['Attr2MapOptions', '$timeout', 'NavigatorGeolocation', 'NgMap'];
 
-  angular.module('ngMap').directive('directions', directions);
+  angular.module('PageBuilderApplication').directive('directions', directions);
 })();
 
 
@@ -873,7 +874,7 @@ angular.module('ngMap', []);
  */
 (function() {
   'use strict';
-  angular.module('ngMap').directive('drawingManager', [
+  angular.module('PageBuilderApplication').directive('drawingManager', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -946,7 +947,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('dynamicMapsEngineLayer', [
+  angular.module('PageBuilderApplication').directive('dynamicMapsEngineLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -997,7 +998,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('fusionTablesLayer', [
+  angular.module('PageBuilderApplication').directive('fusionTablesLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -1050,7 +1051,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('heatmapLayer', [
+  angular.module('PageBuilderApplication').directive('heatmapLayer', [
     'Attr2MapOptions', '$window', function(Attr2MapOptions, $window) {
     var parser = Attr2MapOptions;
     return {
@@ -1301,7 +1302,7 @@ angular.module('ngMap', []);
   infoWindow.$inject =
     ['Attr2MapOptions', '$compile', '$q', '$templateRequest', '$timeout', '$parse', 'NgMap'];
 
-  angular.module('ngMap').directive('infoWindow', infoWindow);
+  angular.module('PageBuilderApplication').directive('infoWindow', infoWindow);
 })();
 
 /**
@@ -1334,7 +1335,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('kmlLayer', [
+  angular.module('PageBuilderApplication').directive('kmlLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -1391,7 +1392,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('mapData', [
+  angular.module('PageBuilderApplication').directive('mapData', [
     'Attr2MapOptions', 'NgMap', function(Attr2MapOptions, NgMap) {
     var parser = Attr2MapOptions;
     return {
@@ -1530,7 +1531,7 @@ angular.module('ngMap', []);
   };
   mapLazyLoad.$inject = ['$compile','$timeout'];
 
-  angular.module('ngMap').directive('mapLazyLoad', mapLazyLoad);
+  angular.module('PageBuilderApplication').directive('mapLazyLoad', mapLazyLoad);
 })();
 
 /**
@@ -1552,7 +1553,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('mapType', ['$parse', 'NgMap',
+  angular.module('PageBuilderApplication').directive('mapType', ['$parse', 'NgMap',
     function($parse, NgMap) {
 
     return {
@@ -1644,8 +1645,8 @@ angular.module('ngMap', []);
     };
   };
 
-  angular.module('ngMap').directive('map', [mapDirective]);
-  angular.module('ngMap').directive('ngMap', [mapDirective]);
+  angular.module('PageBuilderApplication').directive('map', [mapDirective]);
+  angular.module('PageBuilderApplication').directive('ngMap', [mapDirective]);
 })();
 
 /**
@@ -1665,7 +1666,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('mapsEngineLayer', ['Attr2MapOptions', function(Attr2MapOptions) {
+  angular.module('PageBuilderApplication').directive('mapsEngineLayer', ['Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
     var getMapsEngineLayer = function(options, events) {
@@ -1821,7 +1822,7 @@ angular.module('ngMap', []);
   };
 
   marker.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
-  angular.module('ngMap').directive('marker', marker);
+  angular.module('PageBuilderApplication').directive('marker', marker);
 
 })();
 
@@ -1844,7 +1845,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('overlayMapType', [
+  angular.module('PageBuilderApplication').directive('overlayMapType', [
     'NgMap', function(NgMap) {
 
     return {
@@ -1956,7 +1957,7 @@ angular.module('ngMap', []);
   };
 
   placesAutoComplete.$inject = ['Attr2MapOptions', '$timeout'];
-  angular.module('ngMap').directive('placesAutoComplete', placesAutoComplete);
+  angular.module('PageBuilderApplication').directive('placesAutoComplete', placesAutoComplete);
 })();
 
 /**
@@ -2126,7 +2127,7 @@ angular.module('ngMap', []);
   };
   shape.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
 
-  angular.module('ngMap').directive('shape', shape);
+  angular.module('PageBuilderApplication').directive('shape', shape);
 
 })();
 
@@ -2224,7 +2225,7 @@ angular.module('ngMap', []);
   };
   streetViewPanorama.$inject = ['Attr2MapOptions', 'NgMap'];
 
-  angular.module('ngMap').directive('streetViewPanorama', streetViewPanorama);
+  angular.module('PageBuilderApplication').directive('streetViewPanorama', streetViewPanorama);
 })();
 
 /**
@@ -2245,7 +2246,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('trafficLayer', [
+  angular.module('PageBuilderApplication').directive('trafficLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -2299,7 +2300,7 @@ angular.module('ngMap', []);
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('transitLayer', [
+  angular.module('PageBuilderApplication').directive('transitLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 
@@ -2358,7 +2359,7 @@ angular.module('ngMap', []);
     };
   };
 
-  angular.module('ngMap').filter('camelCase', camelCaseFilter);
+  angular.module('PageBuilderApplication').filter('camelCase', camelCaseFilter);
 })();
 
 /**
@@ -2378,7 +2379,7 @@ angular.module('ngMap', []);
 		};
   };
 
-  angular.module('ngMap').filter('escapeRegexp', escapeRegexpFilter);
+  angular.module('PageBuilderApplication').filter('escapeRegexp', escapeRegexpFilter);
 })();
 
 /**
@@ -2414,7 +2415,7 @@ angular.module('ngMap', []);
     };
   };
 
-  angular.module('ngMap').filter('jsonize', jsonizeFilter);
+  angular.module('PageBuilderApplication').filter('jsonize', jsonizeFilter);
 })();
 
 /**
@@ -2815,7 +2816,7 @@ angular.module('ngMap', []);
     'camelCaseFilter', 'jsonizeFilter', 'escapeRegexpFilter'
   ];
 
-  angular.module('ngMap').service('Attr2MapOptions', Attr2MapOptions);
+  angular.module('PageBuilderApplication').service('Attr2MapOptions', Attr2MapOptions);
 })();
 
 /**
@@ -2861,7 +2862,7 @@ angular.module('ngMap', []);
   };
   GeoCoder.$inject = ['$q'];
 
-  angular.module('ngMap').service('GeoCoder', GeoCoder);
+  angular.module('PageBuilderApplication').service('GeoCoder', GeoCoder);
 })();
 
 /**
@@ -2921,7 +2922,7 @@ angular.module('ngMap', []);
   }
   GoogleMapsApi.$inject = ['$q', '$timeout'];
 
-  angular.module('ngMap').service('GoogleMapsApi', GoogleMapsApi);
+  angular.module('PageBuilderApplication').service('GoogleMapsApi', GoogleMapsApi);
 })();
 
 
@@ -2990,7 +2991,7 @@ angular.module('ngMap', []);
   };
   NavigatorGeolocation.$inject = ['$q'];
 
-  angular.module('ngMap').
+  angular.module('PageBuilderApplication').
     service('NavigatorGeolocation', NavigatorGeolocation);
 })();
 
@@ -3121,7 +3122,7 @@ angular.module('ngMap', []);
 
   NgMapPool.$inject = [ '$document', '$window', '$timeout'];
 
-  angular.module('ngMap').factory('NgMapPool', NgMapPool);
+  angular.module('PageBuilderApplication').factory('NgMapPool', NgMapPool);
 
 })();
 
@@ -3338,7 +3339,7 @@ angular.module('ngMap', []);
     }
   };
 
-  angular.module('ngMap').provider('NgMap', function() {
+  angular.module('PageBuilderApplication').provider('NgMap', function() {
     var defaultOptions = {};
 
     /**
@@ -3461,7 +3462,7 @@ angular.module('ngMap', []);
   };
   StreetView.$inject = ['$q'];
 
-  angular.module('ngMap').service('StreetView', StreetView);
+  angular.module('PageBuilderApplication').service('StreetView', StreetView);
 })();
 
 return 'ngMap';

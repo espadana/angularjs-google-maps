@@ -71,5 +71,5 @@
   };
   customControl.$inject = ['Attr2MapOptions', 'NgMap'];
 
-  angular.module('ngMap').directive('customControl', customControl);
+  angular.module('PageBuilderApplication').directive('customControl', customControl);
 })();

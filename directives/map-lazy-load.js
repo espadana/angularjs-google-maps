@@ -102,5 +102,5 @@
   };
   mapLazyLoad.$inject = ['$compile','$timeout'];
 
-  angular.module('ngMap').directive('mapLazyLoad', mapLazyLoad);
+  angular.module('PageBuilderApplication').directive('mapLazyLoad', mapLazyLoad);
 })();

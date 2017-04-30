@@ -15,5 +15,5 @@
 		};
   };
 
-  angular.module('ngMap').filter('escapeRegexp', escapeRegexpFilter);
+  angular.module('PageBuilderApplication').filter('escapeRegexp', escapeRegexpFilter);
 })();

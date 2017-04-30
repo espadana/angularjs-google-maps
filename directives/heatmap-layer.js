@@ -15,7 +15,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('heatmapLayer', [
+  angular.module('PageBuilderApplication').directive('heatmapLayer', [
     'Attr2MapOptions', '$window', function(Attr2MapOptions, $window) {
     var parser = Attr2MapOptions;
     return {

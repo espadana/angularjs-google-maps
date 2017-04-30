@@ -228,5 +228,5 @@
   customMarkerDirective.$inject =
     ['$timeout', '$compile', '$interpolate', 'Attr2MapOptions', 'NgMap', 'escapeRegexpFilter'];
 
-  angular.module('ngMap').directive('customMarker', customMarkerDirective);
+  angular.module('PageBuilderApplication').directive('customMarker', customMarkerDirective);
 })();

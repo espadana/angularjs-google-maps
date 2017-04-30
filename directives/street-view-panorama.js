@@ -93,5 +93,5 @@
   };
   streetViewPanorama.$inject = ['Attr2MapOptions', 'NgMap'];
 
-  angular.module('ngMap').directive('streetViewPanorama', streetViewPanorama);
+  angular.module('PageBuilderApplication').directive('streetViewPanorama', streetViewPanorama);
 })();

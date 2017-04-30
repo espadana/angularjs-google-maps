@@ -16,7 +16,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('dynamicMapsEngineLayer', [
+  angular.module('PageBuilderApplication').directive('dynamicMapsEngineLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

@@ -28,7 +28,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('kmlLayer', [
+  angular.module('PageBuilderApplication').directive('kmlLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

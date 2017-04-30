@@ -52,5 +52,5 @@
   };
   bicyclingLayer.$inject = ['Attr2MapOptions'];
 
-  angular.module('ngMap').directive('bicyclingLayer', bicyclingLayer);
+  angular.module('PageBuilderApplication').directive('bicyclingLayer', bicyclingLayer);
 })();

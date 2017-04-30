@@ -123,6 +123,6 @@
   };
 
   marker.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
-  angular.module('ngMap').directive('marker', marker);
+  angular.module('PageBuilderApplication').directive('marker', marker);
 
 })();

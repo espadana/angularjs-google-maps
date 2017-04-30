@@ -165,6 +165,6 @@
   };
   shape.$inject = ['Attr2MapOptions', '$parse', 'NgMap'];
 
-  angular.module('ngMap').directive('shape', shape);
+  angular.module('PageBuilderApplication').directive('shape', shape);
 
 })();

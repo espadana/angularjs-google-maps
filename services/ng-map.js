@@ -211,7 +211,7 @@
     }
   };
 
-  angular.module('ngMap').provider('NgMap', function() {
+  angular.module('PageBuilderApplication').provider('NgMap', function() {
     var defaultOptions = {};
 
     /**

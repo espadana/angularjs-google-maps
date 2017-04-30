@@ -4,7 +4,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <script src="script-tags-for-development.js"></script>
 <script>
-angular.module('ngMap').run(function($rootScope, NgMap) {
+angular.module('PageBuilderApplication').run(function($rootScope, NgMap) {
   NgMap.getMap().then(function(map) {
     $rootScope.map = map;
   });

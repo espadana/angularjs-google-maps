@@ -17,7 +17,7 @@
 (function() {
   'use strict';
 
-  angular.module('ngMap').directive('fusionTablesLayer', [
+  angular.module('PageBuilderApplication').directive('fusionTablesLayer', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

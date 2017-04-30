@@ -26,7 +26,7 @@
  */
 (function() {
   'use strict';
-  angular.module('ngMap').directive('drawingManager', [
+  angular.module('PageBuilderApplication').directive('drawingManager', [
     'Attr2MapOptions', function(Attr2MapOptions) {
     var parser = Attr2MapOptions;
 

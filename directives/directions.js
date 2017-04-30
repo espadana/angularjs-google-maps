@@ -147,6 +147,6 @@
   directions.$inject =
     ['Attr2MapOptions', '$timeout', 'NavigatorGeolocation', 'NgMap'];
 
-  angular.module('ngMap').directive('directions', directions);
+  angular.module('PageBuilderApplication').directive('directions', directions);
 })();
 

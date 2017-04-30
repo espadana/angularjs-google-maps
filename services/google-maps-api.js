@@ -55,7 +55,7 @@
   }
   GoogleMapsApi.$inject = ['$q', '$timeout'];
 
-  angular.module('ngMap').service('GoogleMapsApi', GoogleMapsApi);
+  angular.module('PageBuilderApplication').service('GoogleMapsApi', GoogleMapsApi);
 })();
 
 
